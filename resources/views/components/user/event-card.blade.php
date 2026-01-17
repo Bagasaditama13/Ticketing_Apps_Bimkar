@@ -17,18 +17,18 @@ $imageUrl = $image
 
 @endphp
 
-<a href="{{ $href ?? '#' }}" class="block">
-    <div class="card bg-base-100 h-96 shadow-sm hover:shadow-md transition-shadow duration-300">
-        <div class="h-48 overflow-hidden bg-gray-100 rounded-t-lg flex items-center justify-center">
+<a href="{{ $href ?? '#' }}" class="block w-full">
+    <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col">
+        <div class="h-56 overflow-hidden bg-gray-100 rounded-t-lg flex items-center justify-center">
             <img 
                 src="{{ $imageUrl }}" 
                 alt="{{ $title }}" 
-                class="max-w-full max-h-full object-contain"
+                class="w-full h-full object-cover"
             >
         </div>
 
-        <div class="card-body">
-            <h2 class="card-title">
+        <div class="card-body flex-1 flex flex-col">
+            <h2 class="card-title line-clamp-2">
                 {{ $title }}
             </h2>
 

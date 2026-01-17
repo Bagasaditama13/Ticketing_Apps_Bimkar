@@ -107,7 +107,6 @@
                 </form>
             </div>
         </div>
-    </div>
 
         <div class="mt-10">
             <div class="flex">
@@ -150,8 +149,9 @@
                 </table>
             </div>
         </div>
+    </div>
 
-        <!-- Add Ticket Modal -->
+    <!-- Add Ticket Modal -->
     <dialog id="add_ticket_modal" class="modal">
         <form method="POST" action="{{ route('admin.tickets.store') }}" class="modal-box">
             @csrf

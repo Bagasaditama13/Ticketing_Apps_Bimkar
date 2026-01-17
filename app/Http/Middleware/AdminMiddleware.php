@@ -10,12 +10,11 @@ class AdminMiddleware
 {
     public function handle(Request $request, Closure $next): Response
     {
-        // Cek apakah user yang sedang login adalah admin
         if (auth()->check() && auth()->user()->role === 'admin') {
-            return $next($request); // Izinkan akses ke route berikutnya
+            return $next($request);
         }
 
-        // jika bukan admin, logout user dan redirect ke halaman login
+        // If not admin, log out the user
         auth()->logout();
         return redirect('/login');
     }

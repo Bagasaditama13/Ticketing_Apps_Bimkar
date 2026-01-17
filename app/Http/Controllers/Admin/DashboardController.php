@@ -13,11 +13,8 @@ class DashboardController extends Controller
     /**
      * Display the dashboard.
      */
-
-    // fungsi untuk menampilkan halaman dashboard admin dengan data statistik
     public function index()
     {
-        //menghitung total data event, kategori, dan order untuk ditampilkan di dashboard admin
         $totalEvents = Event::count();
         $totalCategories = \App\Models\Kategori::count();
         $totalOrders = Order::count();
